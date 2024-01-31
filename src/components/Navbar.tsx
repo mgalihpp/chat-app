@@ -9,14 +9,24 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { ModeToggle } from "./mode-toggle";
 import Phone from "./Icons/Phone";
 import DotsVertical from "./Icons/DotsVertical";
+import { Button } from "./ui/button";
+import { SignOut } from "@/store/authSlice";
+import { AppDispatch } from "@/store";
+import { useDispatch } from "react-redux";
 
 export default function Navbar() {
+  const dispatch: AppDispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(SignOut());
+  };
+
   return (
     <>
       <div className=" fixed z-50 w-full border border-gray-300 dark:border-secondary bg-background shadow-sm">
         <div className="mx-auto flex max-w-full flex-row px-6 gap-2">
-          <div className="flex w-full max-w-[384px] gap-2 border-r border-gray-50">
-            <div className="m-0 hidden w-max px-0 lg:flex lg:items-center lg:justify-end xl:col-span-2">
+          <div className="hidden lg:flex w-full max-w-[384px] gap-2">
+            <div className="m-0 w-max px-0 flex items-center justify-end xl:col-span-2">
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <Avatar>
@@ -34,6 +44,9 @@ export default function Navbar() {
                     </p>
                   </div>
                   <DropdownMenuItem>Settings</DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleLogout}>
+                    Logout
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -64,8 +77,14 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex w-1/3 gap-4">
-            <div className="m-0 hidden w-max px-0 lg:flex lg:items-center lg:justify-end xl:col-span-2">
+          {/* MOBILE */}
+          <div className="flex w-full gap-4 py-4 lg:py-0">
+            <div className="m-0 w-max px-0 flex items-center justify-end xl:col-span-2">
+              <div className="lg:hidden pr-2">
+                <Button variant="ghost" size="icon">
+                  {"<"}
+                </Button>
+              </div>
               <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
@@ -80,7 +99,7 @@ export default function Navbar() {
               </p>
             </div>
           </div>
-          <div className="mr-5 flex flex-shrink-0 items-center lg:static xl:col-span-2 gap-2">
+          <div className="mr-5 flex flex-shrink-0 items-center lg:static xl:col-span-2 gap-4">
             <Search className="w-5 h-5 stroke-primary" />
             <Phone className="w-5 h-5 fill-primary" />
             <DotsVertical className="w-5 h-5 stroke-primary" />

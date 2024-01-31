@@ -17,10 +17,10 @@ export default function Layout({ children }: PropsWithChildren) {
         setCloseSideBar={setCloseSidebar}
       />
 
-      <div className={cn("lg:pl-96", { "lg:pl-20": closeSidebar })}>
-        <main className="py-24">
+      <div className={cn("lg:pl-96", { "lg:pl-12": closeSidebar })}>
+        <main className="pt-24">
           <div className="mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-x-4">{children}</div>
+            <div className="space-x-4 hidden lg:block">{children}</div>
           </div>
         </main>
       </div>
