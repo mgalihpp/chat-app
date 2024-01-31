@@ -103,7 +103,7 @@ export default function Navbar() {
             <Search className="w-5 h-5 stroke-primary" />
             <Phone className="w-5 h-5 fill-primary" />
             <DotsVertical className="w-5 h-5 stroke-primary" />
-            {/* <ModeToggle /> */}
+            <ModeToggle />
           </div>
         </div>
       </div>

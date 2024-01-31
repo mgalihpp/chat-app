@@ -20,9 +20,9 @@ interface User {
 }
 
 export default function Sidebar({
-  isOpen,
+  // isOpen,
   setCloseSideBar,
-  setSidebarOpen,
+  // setSidebarOpen,
   closeSidebar,
 }: SidebarProps) {
   const [userList, setUserList] = useState<User[]>([]);

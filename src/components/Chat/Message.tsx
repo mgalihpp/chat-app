@@ -21,7 +21,12 @@ export default function Message({
           "flex justify-end": isUserMessage,
         })}
       >
-        <p className="text-sm lg:text-base text-semibold">
+        <p
+          className={cn("text-sm lg:text-base text-semibold", {
+            "text-white dark:text-primary": !isUserMessage,
+            "text-white": isUserMessage,
+          })}
+        >
           <span>{message}</span>
         </p>
       </div>

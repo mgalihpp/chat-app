@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { auth, db } from "@/lib/firebase";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
