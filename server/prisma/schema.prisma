@@ -30,7 +30,7 @@ model Message {
     senderId   Int      @db.Int()
     receiverId Int      @db.Int()
     text       String   @db.Text()
-    files      String   @db.Text()
+    files      String?  @db.Text()
     created_At DateTime @default(now())
     updated_At DateTime @default(now()) @updatedAt
 }
