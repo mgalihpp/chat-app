@@ -37,7 +37,7 @@ async function isAuthenticated(
         password: true,
       },
       where: {
-        id: decoded.id,
+        id: Number(decoded.id),
       },
     });
 

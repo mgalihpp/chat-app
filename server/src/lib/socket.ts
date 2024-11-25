@@ -7,23 +7,23 @@ import logger from './logger';
  * Class representing a SocketServer.
  */
 class SocketServer {
-  private io: Server;
+  static io: Server;
   private app: express.Application;
   private server: http.Server;
-  private userSocketMap: Record<string, string>; // Stores {userId: socketId}
+  static userSocketMap: Record<string, string>; // Stores {userId: socketId}
 
   /**
    * Create a SocketServer.
    * @param {number} port - The port number on which the server should listen.
    * @param {string[]} corsOrigin - List of allowed CORS origins.
    */
-  constructor(port: number, corsOrigin: string[]) {
+  constructor(port: number, corsOrigin: string) {
     this.app = express();
     this.server = http.createServer(this.app);
-    this.io = new Server(this.server, {
-      cors: { origin: corsOrigin },
+    SocketServer.io = new Server(this.server, {
+      cors: { origin: corsOrigin, credentials: true },
     });
-    this.userSocketMap = {};
+    SocketServer.userSocketMap = {};
 
     this.initializeSocketEvents();
     this.startServer(port);
@@ -45,18 +45,18 @@ class SocketServer {
    * @private
    */
   private initializeSocketEvents(): void {
-    this.io.on('connection', (socket) => {
+    SocketServer.io.on('connection', (socket) => {
       logger.info('A user connected with socket ID: ', socket.id);
 
       const userId = socket.handshake.query.userId as string;
       if (userId) {
-        this.userSocketMap[userId] = socket.id;
+        SocketServer.userSocketMap[userId] = socket.id;
         this.broadcastOnlineUsers();
       }
 
       socket.on('disconnect', () => {
         logger.info(`A user disconnected with socket ID: ${socket.id}`);
-        if (userId) delete this.userSocketMap[userId];
+        if (userId) delete SocketServer.userSocketMap[userId];
         this.broadcastOnlineUsers();
       });
     });
@@ -67,9 +67,14 @@ class SocketServer {
    * @private
    */
   private broadcastOnlineUsers(): void {
-    const onlineUsers = Object.keys(this.userSocketMap);
+    const onlineUsers = Object.keys(SocketServer.userSocketMap);
     logger.info(`Broadcasting online users: ${JSON.stringify(onlineUsers)}`);
-    this.io.emit('getOnlineUsers', onlineUsers);
+    SocketServer.io.emit(
+      'getOnlineUsers',
+      onlineUsers.map((user) => ({
+        id: parseInt(user),
+      }))
+    );
   }
 
   /**
@@ -77,8 +82,8 @@ class SocketServer {
    * @param {string} userId - The ID of the user.
    * @returns {string | undefined} The socket ID of the user, or undefined if not found.
    */
-  public getReceiverSocketId(userId: string): string | undefined {
-    return this.userSocketMap[userId];
+  public static getReceiverSocketId(userId: string): string | undefined {
+    return SocketServer.userSocketMap[userId];
   }
 
   /**
@@ -94,7 +99,7 @@ class SocketServer {
    * @returns {Server} The Socket.IO server.
    */
   public getIO(): Server {
-    return this.io;
+    return SocketServer.io;
   }
 }
 
