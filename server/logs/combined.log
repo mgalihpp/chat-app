@@ -1,2 +1,159 @@
-[2024-11-20 17:18:48] ERROR: invalid signature
-[2024-11-20 17:19:01] ERROR: invalid signature
+[2024-11-25 21:00:19] INFO: [object Object]
+[2024-11-25 21:00:43] INFO: A user connected with socket ID: 
+[2024-11-25 21:00:43] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:00:43] INFO: A user connected with socket ID: 
+[2024-11-25 21:00:43] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:00:44] INFO: [object Object]
+[2024-11-25 21:06:11] INFO: A user connected with socket ID: 
+[2024-11-25 21:06:11] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:06:11] INFO: A user connected with socket ID: 
+[2024-11-25 21:06:11] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:07:01] INFO: A user connected with socket ID: 
+[2024-11-25 21:07:01] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:07:01] INFO: A user connected with socket ID: 
+[2024-11-25 21:07:01] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:07:19] INFO: [object Object]
+[2024-11-25 21:07:20] INFO: A user connected with socket ID: 
+[2024-11-25 21:07:20] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:07:21] INFO: [object Object]
+[2024-11-25 21:07:22] INFO: A user connected with socket ID: 
+[2024-11-25 21:07:22] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:07:22] INFO: [object Object]
+[2024-11-25 21:07:22] INFO: [object Object]
+[2024-11-25 21:08:03] INFO: A user connected with socket ID: 
+[2024-11-25 21:08:03] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:08:04] INFO: A user connected with socket ID: 
+[2024-11-25 21:08:04] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:08:07] INFO: [object Object]
+[2024-11-25 21:09:43] INFO: A user connected with socket ID: 
+[2024-11-25 21:09:43] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:09:43] INFO: A user connected with socket ID: 
+[2024-11-25 21:09:43] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:13:40] INFO: A user disconnected with socket ID: k2MI2xFdrpEGsfs7AAAC
+[2024-11-25 21:13:40] INFO: Broadcasting online users: []
+[2024-11-25 21:13:40] INFO: A user disconnected with socket ID: XXZeFp0y_pcouelZAAAD
+[2024-11-25 21:13:40] INFO: Broadcasting online users: []
+[2024-11-25 21:13:41] INFO: A user connected with socket ID: 
+[2024-11-25 21:13:41] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:13:41] INFO: A user connected with socket ID: 
+[2024-11-25 21:13:41] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:14:10] INFO: A user disconnected with socket ID: _Slz87G0bc0BEnc0AAAG
+[2024-11-25 21:14:10] INFO: Broadcasting online users: []
+[2024-11-25 21:14:10] INFO: A user disconnected with socket ID: _0VeEafMzpVkZftQAAAH
+[2024-11-25 21:14:10] INFO: Broadcasting online users: []
+[2024-11-25 21:14:11] INFO: A user connected with socket ID: 
+[2024-11-25 21:14:11] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:14:11] INFO: A user connected with socket ID: 
+[2024-11-25 21:14:11] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:15:27] INFO: A user connected with socket ID: 
+[2024-11-25 21:15:27] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:15:27] INFO: A user connected with socket ID: 
+[2024-11-25 21:15:27] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:15:31] ERROR: Cannot convert object to primitive value
+[2024-11-25 21:15:33] ERROR: Cannot convert object to primitive value
+[2024-11-25 21:15:33] INFO: A user connected with socket ID: 
+[2024-11-25 21:15:33] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:15:33] INFO: A user connected with socket ID: 
+[2024-11-25 21:15:33] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:15:34] ERROR: Cannot convert object to primitive value
+[2024-11-25 21:16:15] INFO: A user connected with socket ID: 
+[2024-11-25 21:16:15] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:16:15] INFO: A user connected with socket ID: 
+[2024-11-25 21:16:15] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:16:27] INFO: A user connected with socket ID: 
+[2024-11-25 21:16:27] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:16:28] INFO: A user connected with socket ID: 
+[2024-11-25 21:16:28] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:17:00] INFO: A user connected with socket ID: 
+[2024-11-25 21:17:00] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:17:00] ERROR: Cannot convert object to primitive value
+[2024-11-25 21:17:00] INFO: A user connected with socket ID: 
+[2024-11-25 21:17:00] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:17:01] ERROR: Cannot convert object to primitive value
+[2024-11-25 21:17:02] ERROR: Cannot convert object to primitive value
+[2024-11-25 21:17:03] ERROR: Cannot convert object to primitive value
+[2024-11-25 21:17:55] INFO: A user connected with socket ID: 
+[2024-11-25 21:17:55] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:17:55] INFO: A user connected with socket ID: 
+[2024-11-25 21:17:55] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:17:59] INFO: A user disconnected with socket ID: WIqSEYzRR-7FQKeMAAAC
+[2024-11-25 21:17:59] INFO: Broadcasting online users: []
+[2024-11-25 21:17:59] INFO: A user disconnected with socket ID: BeqMXmtEd1f1WsnkAAAD
+[2024-11-25 21:17:59] INFO: Broadcasting online users: []
+[2024-11-25 21:17:59] INFO: A user connected with socket ID: 
+[2024-11-25 21:17:59] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:17:59] INFO: A user connected with socket ID: 
+[2024-11-25 21:17:59] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:19:55] INFO: A user connected with socket ID: 
+[2024-11-25 21:19:55] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:19:55] INFO: A user connected with socket ID: 
+[2024-11-25 21:19:55] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:20:05] INFO: A user connected with socket ID: 
+[2024-11-25 21:20:05] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:20:05] INFO: A user connected with socket ID: 
+[2024-11-25 21:20:05] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:20:09] INFO: A user disconnected with socket ID: LMDWXgNFMkkgG8LfAAAC
+[2024-11-25 21:20:09] INFO: Broadcasting online users: []
+[2024-11-25 21:20:09] INFO: A user disconnected with socket ID: 1JQPijclcfbnVxtzAAAD
+[2024-11-25 21:20:09] INFO: Broadcasting online users: []
+[2024-11-25 21:20:09] INFO: A user connected with socket ID: 
+[2024-11-25 21:20:09] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:20:09] INFO: A user connected with socket ID: 
+[2024-11-25 21:20:09] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:20:19] INFO: A user disconnected with socket ID: HOWMFQ-FuIUyl6zGAAAG
+[2024-11-25 21:20:19] INFO: Broadcasting online users: []
+[2024-11-25 21:20:19] INFO: A user disconnected with socket ID: r1wPibmJaTOAQFjyAAAH
+[2024-11-25 21:20:19] INFO: Broadcasting online users: []
+[2024-11-25 21:20:19] INFO: A user connected with socket ID: 
+[2024-11-25 21:20:19] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:20:19] INFO: A user connected with socket ID: 
+[2024-11-25 21:20:19] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:21:24] INFO: A user connected with socket ID: 
+[2024-11-25 21:21:24] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:21:24] INFO: A user connected with socket ID: 
+[2024-11-25 21:21:24] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:21:27] INFO: A user disconnected with socket ID: uQ6gTSw5SRlzADmTAAAC
+[2024-11-25 21:21:27] INFO: Broadcasting online users: []
+[2024-11-25 21:21:27] INFO: A user disconnected with socket ID: FzcaZI0_nY9ERb2IAAAD
+[2024-11-25 21:21:27] INFO: Broadcasting online users: []
+[2024-11-25 21:21:28] INFO: A user connected with socket ID: 
+[2024-11-25 21:21:28] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:21:28] INFO: A user connected with socket ID: 
+[2024-11-25 21:21:28] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:23:50] INFO: A user connected with socket ID: 
+[2024-11-25 21:23:50] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:23:50] INFO: A user connected with socket ID: 
+[2024-11-25 21:23:50] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:23:55] INFO: A user disconnected with socket ID: 9LkRwcMjYHt3iZd1AAAK
+[2024-11-25 21:23:55] INFO: Broadcasting online users: []
+[2024-11-25 21:23:55] INFO: A user disconnected with socket ID: wQf1Zr_4xlpKrSEVAAAL
+[2024-11-25 21:23:55] INFO: Broadcasting online users: []
+[2024-11-25 21:26:55] INFO: Attempted login for user: 1
+[2024-11-25 21:26:55] INFO: A user connected with socket ID: 
+[2024-11-25 21:26:55] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:26:55] INFO: A user connected with socket ID: 
+[2024-11-25 21:26:55] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:27:40] INFO: A user connected with socket ID: 
+[2024-11-25 21:27:40] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:27:40] INFO: A user connected with socket ID: 
+[2024-11-25 21:27:40] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:27:54] INFO: A user connected with socket ID: 
+[2024-11-25 21:27:54] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:27:54] INFO: A user connected with socket ID: 
+[2024-11-25 21:27:54] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:28:44] INFO: A user connected with socket ID: 
+[2024-11-25 21:28:44] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:28:44] INFO: A user connected with socket ID: 
+[2024-11-25 21:28:44] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:28:57] INFO: A user connected with socket ID: 
+[2024-11-25 21:28:57] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:28:59] INFO: A user connected with socket ID: 
+[2024-11-25 21:28:59] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:29:19] INFO: A user disconnected with socket ID: 8LncPTAyTIBp15DHAAAB
+[2024-11-25 21:29:19] INFO: Broadcasting online users: []
+[2024-11-25 21:29:19] INFO: A user disconnected with socket ID: HofXpDjUJdIVQdNLAAAD
+[2024-11-25 21:29:19] INFO: Broadcasting online users: []
+[2024-11-25 21:29:20] INFO: A user connected with socket ID: 
+[2024-11-25 21:29:20] INFO: Broadcasting online users: ["1"]
+[2024-11-25 21:29:20] INFO: A user connected with socket ID: 
+[2024-11-25 21:29:20] INFO: Broadcasting online users: ["1"]
