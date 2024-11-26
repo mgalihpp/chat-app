@@ -6,6 +6,7 @@ import ChatHeader from '@/components/Chat/ChatHeader';
 import { formatMessageTime } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 import MessageInput from '@/components/Chat/MessageInput';
+import MessageSkeleton from '@/components/Skeleton/MessageSkeleton';
 
 interface ActionData {
   messages?: Message[];
@@ -56,6 +57,10 @@ function ChatContainer() {
     subscribeToMessages();
     return () => unsubscribeFromMessages();
   }, [subscribeToMessages, unsubscribeFromMessages]);
+
+  if (fetcher.state === 'loading') {
+    return <MessageSkeleton />;
+  }
 
   return (
     <div className="flex-1 flex flex-col overflow-auto">
