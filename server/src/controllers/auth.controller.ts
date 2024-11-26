@@ -111,35 +111,17 @@ export class AuthController {
         return HttpError.notFound(res, 'User not found');
       }
 
-      if (username !== user.username) {
-        await db.user.update({
-          where: {
-            id: user.id,
-          },
-          data: {
-            username,
-          },
-        });
-      } else if (username === user.username) {
-        await db.user.update({
-          where: {
-            id: user.id,
-          },
-          data: {
-            avatar: `${process.env.BASEURL}/${avatarPath}`,
-          },
-        });
-      } else {
-        await db.user.update({
-          where: {
-            id: user.id,
-          },
-          data: {
-            username,
-            avatar: `${process.env.BASEURL}/${avatarPath}`,
-          },
-        });
-      }
+      await db.user.update({
+        where: {
+          id: user.id,
+        },
+        data: {
+          username: username ? username : user.username,
+          avatar: avatarPath
+            ? `${process.env.BASEURL}/${avatarPath}`
+            : user.avatar,
+        },
+      });
 
       return httpResponse.success(
         res,
