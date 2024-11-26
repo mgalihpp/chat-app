@@ -1,6 +1,7 @@
 import api from '@/lib/axios';
 import { ApiResponse } from '@/types/api';
 import { User } from '@/types/auth';
+import { io, Socket } from 'socket.io-client';
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
@@ -10,8 +11,8 @@ type AuthState = {
   isSigningUp: boolean;
   isLoggingIn: boolean;
   isUpdatingProfile: boolean;
-  onlineUsers: never[];
-  socket: string | null;
+  onlineUsers: User[];
+  socket: Socket | null;
   me: () => Promise<void>;
   signUp: () => Promise<void>;
   login: () => Promise<void>;
@@ -39,7 +40,7 @@ export const useAuth = create<AuthState>()(
             .then((response) => response.data);
 
           set({ auth: res.data });
-          get().connectSocket();
+          await get().connectSocket();
         } catch (error) {
           console.log(error);
           set({
@@ -59,17 +60,49 @@ export const useAuth = create<AuthState>()(
         });
       },
 
-      async logout() {},
+      async logout() {
+        set({
+          auth: null,
+          isAuthenticating: true,
+        });
+      },
 
       async updateProfile() {},
 
-      async connectSocket() {},
+      async connectSocket() {
+        const { auth } = get();
+        if (!auth || get().socket?.connected) return;
 
-      async disconnectSocket() {},
+        const socket = io('http://localhost:5000', {
+          query: {
+            userId: auth.id,
+          },
+        });
+        socket.connect();
+
+        set({ socket: socket });
+
+        socket.on('getOnlineUsers', (userIds) => {
+          set({ onlineUsers: userIds });
+        });
+      },
+      async disconnectSocket() {
+        if (get().socket?.connected) get().socket?.disconnect();
+      },
     }),
     {
       name: 'auth',
       storage: createJSONStorage(() => localStorage),
+      partialize: (state) =>
+        // Only save the auth and isAuthenticating state
+        ({
+          auth: state.auth,
+          isAuthenticating: state.isAuthenticating,
+          isSigningUp: state.isSigningUp,
+          isLoggingIn: state.isLoggingIn,
+          isUpdatingProfile: state.isUpdatingProfile,
+          onlineUsers: state.onlineUsers,
+        }),
     }
   )
 );

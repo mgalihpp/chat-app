@@ -6,16 +6,38 @@ import { loginAction } from '@/routes/Auth/Login/actions/loginAction';
 import SignUpPage from '@/routes/Auth/Signup/SingUpPage';
 import { signUpAction } from '@/routes/Auth/Signup/actions/signUpAction';
 import { logoutAction } from '@/routes/Auth/Logout/actions/logoutAction';
+import { homeLoader } from '@/routes/Home/homeLoader';
+import HomePage from '@/routes/Home/HomePage';
+import { chatLoader } from '@/routes/Home/loaders/chatLoader';
+import ProfilePage from '@/routes/Auth/Profile/ProfilePage';
+import SettingsPage from './Settings/SettingsPage';
 
 const routes: RouteObject[] = [
   {
     path: '/',
     element: <RootLayout />,
     children: [
-      // {
-      //   path: '',
-      //   element: <ChatLayout />,
-      // },
+      {
+        path: '',
+        lazy: async () => {
+          return {
+            element: <HomePage />,
+            loader: homeLoader,
+          };
+        },
+      },
+      {
+        path: '/profile',
+        element: <ProfilePage />,
+      },
+      {
+        path: '/settings',
+        element: <SettingsPage />,
+      },
+      {
+        path: 'chat/:id',
+        loader: chatLoader,
+      },
     ],
   },
   {
