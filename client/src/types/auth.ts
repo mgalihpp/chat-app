@@ -1,11 +1,11 @@
 export interface User {
-  id: string;
-  name: string;
+  id: number;
+  username: string;
   email: string;
+  avatar: string;
   password?: string;
-  createdAt: Date;
-  updatedAt: Date;
-  deletedAt: Date;
+  created_At: Date;
+  updated_At: Date;
 }
 
 export interface ValidationError {
