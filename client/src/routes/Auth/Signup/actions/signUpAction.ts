@@ -34,7 +34,7 @@ export async function signUpAction({ request }: ActionFunctionArgs) {
           errors[path] = errorObject.message;
         });
       } else {
-        errors['server'] = errorMessage.message;
+        errors['server'] = errorMessage;
       }
     }
     return data({ errors }, { status: 400 });

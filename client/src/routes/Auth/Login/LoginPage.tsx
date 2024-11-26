@@ -1,11 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useFetcher } from 'react-router-dom';
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from 'lucide-react';
 import AuthImagePattern from '@/routes/Auth/partials/AuthImagePattern';
+import toast from 'react-hot-toast';
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const fetcher = useFetcher({ key: 'login' });
+
+  useEffect(() => {
+    if (fetcher.data?.errors?.['server']) {
+      toast.error(fetcher.data.errors['server']);
+    }
+  }, [fetcher.data]);
 
   return (
     <div className="h-screen grid lg:grid-cols-2">
